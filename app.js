@@ -9,6 +9,8 @@ const app = express()
 
 const mongooseConnection = require('./connection')
 
+app.enable('trust proxy');
+
 app.use(basicAuth({
     users: { 'test': '123456' },
     challenge: true,
